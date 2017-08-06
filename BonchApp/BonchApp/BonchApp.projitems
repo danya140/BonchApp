@@ -42,15 +42,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\bonch-stekla.png">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\bonch-stekla.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\line.png">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\line.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)images\login.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\login.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\menu_bg.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\nav_bar.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MasterDetailPage1.xaml">
