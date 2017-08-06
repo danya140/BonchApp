@@ -15,6 +15,12 @@ namespace BonchApp
             Button1.BackgroundColor = new Color(256, 256, 256, 0.7);
             Entry1.PlaceholderColor = Color.LightGray;
             Entry2.PlaceholderColor = Color.LightGray;
+            Button1.Clicked += LoginButton_Click; 
 		}
+
+        private async void LoginButton_Click(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new MasterDetailPage1());
+        }
 	}
 }
