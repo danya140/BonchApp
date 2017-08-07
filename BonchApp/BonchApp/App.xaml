@@ -6,5 +6,22 @@
 
 		<!-- Application resource dictionary -->
 
-	</Application.Resources>
+        <!--Custom Navigation Bar-->
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="Fonts/RobotoLight.ttf" />
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="FontFamily" Value="Fonts/RobotoLight.ttf" />
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+            <ControlTemplate x:Key="MainPageTemplate">
+                <RelativeLayout HeightRequest="50">
+                    <Image Aspect="AspectFit"  Source="images/nav_bar.png"/>
+                </RelativeLayout>
+            </ControlTemplate>
+        </ResourceDictionary>
+
+    </Application.Resources>
 </Application>
