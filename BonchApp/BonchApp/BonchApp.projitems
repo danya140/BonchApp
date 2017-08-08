@@ -30,7 +30,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)MasterDetailPage1MenuItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)RoundedButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)LoginPage.xaml">
@@ -52,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Images\login.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\menu_icon.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\menu_bg.png" />
     <Content Include="$(MSBuildThisFileDirectory)Images\nav_bar.png" />
   </ItemGroup>

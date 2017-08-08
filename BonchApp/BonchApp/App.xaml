@@ -18,9 +18,14 @@
             </Style>
             <ControlTemplate x:Key="MainPageTemplate">
                 <RelativeLayout HeightRequest="50">
-                    <Image Aspect="AspectFit"  Source="images/nav_bar.png"/>
+                    <Image Aspect="AspectFit" WidthRequest="100"  Source="images/nav_bar.png"/>
                 </RelativeLayout>
             </ControlTemplate>
+            <Style TargetType="NavigationPage">
+                <Setter Property="HasNavigationBar" Value="True" />
+                <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BarBackgroundColor" Value="#FF2A3035" />
+            </Style>
         </ResourceDictionary>
 
     </Application.Resources>

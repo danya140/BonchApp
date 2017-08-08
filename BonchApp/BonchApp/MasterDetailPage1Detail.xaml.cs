@@ -14,6 +14,7 @@ namespace BonchApp
     {
         public MasterDetailPage1Detail()
         {
+          
             InitializeComponent();
         }
     }
