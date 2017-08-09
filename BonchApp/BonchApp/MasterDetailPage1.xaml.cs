@@ -23,6 +23,7 @@ namespace BonchApp
             InitializeComponent();
             MasterPage.ListView.ItemSelected += ListView_ItemSelected;
 
+
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -30,7 +31,7 @@ namespace BonchApp
             var item = e.SelectedItem as MasterDetailPage1MenuItem;
             if (item == null)
                 return;
-
+           
             var page = (Page)Activator.CreateInstance(item.TargetType);
             page.Title = item.Title;
 

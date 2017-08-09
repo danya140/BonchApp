@@ -50,10 +50,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Images\login.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\login.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\menu_icon.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\menu_bg.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\nav_bar.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\nav_bar.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MasterDetailPage1.xaml">
@@ -72,5 +71,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\MenuBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\menu_part.png" />
   </ItemGroup>
 </Project>
