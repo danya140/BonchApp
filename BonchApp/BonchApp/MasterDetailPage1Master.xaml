@@ -7,15 +7,14 @@
     <RelativeLayout >
         <Image Source="MenuBg.png" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" 
      RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" Aspect="AspectFill"></Image>
-        <Image Source="menu.png" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" 
-     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.436}" Aspect="AspectFit"></Image>
+        <Image Source="menu.png" Aspect="AspectFit"></Image>
         <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="None"
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" 
      RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
             <ListView.Header>
-                <Grid BackgroundColor="#FF2A3035">
+                <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="40"/>
                         <ColumnDefinition Width="*"/>
@@ -29,8 +28,7 @@
                         <RowDefinition Height="20"/>
                     </Grid.RowDefinitions>
                     <Label Grid.Column="1" Grid.Row="1" Text="Имя Фамилия" TextColor="LightGray" Style="{DynamicResource SubtitleStyle}"/>
-                    <Label Grid.Column="1" Grid.Row="2" Text="Профиль" TextColor="LightGray" FontSize="15" Style="{DynamicResource SubtitleStyle}"/>
-                    <Image Grid.Column="1" Grid.Row="3" Margin="-257,0,0,0" Aspect="AspectFit" Source="menu_part.png"></Image>
+                    <Label Grid.Column="1" Margin="0,0,0,40" Grid.Row="2" Text="Профиль" TextColor="LightGray" FontSize="15" Style="{DynamicResource SubtitleStyle}"/>
                 </Grid>
             </ListView.Header>
             <ListView.ItemTemplate> 

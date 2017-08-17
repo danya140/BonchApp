@@ -73,12 +73,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\menu.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\MenuBg.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\menu_part.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\menu.png" />
   </ItemGroup>
 </Project>
