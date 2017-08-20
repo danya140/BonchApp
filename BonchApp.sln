@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BonchApp", "BonchApp\BonchApp\BonchApp.shproj", "{A3FC576A-AE80-49FA-98D2-B79B454BCD7A}"
 EndProject
@@ -212,5 +212,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B3B7F39-02C4-4C1F-82D3-5B3C855062F2}
 	EndGlobalSection
 EndGlobal
