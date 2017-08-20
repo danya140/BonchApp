@@ -144,9 +144,12 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\menu.png" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\burger.png" />
   </ItemGroup>
+=======
+>>>>>>> e257a8b6d3c68de7d3ac68f1195343b980ee01e9
   <Import Project="..\BonchApp\BonchApp.projitems" Label="Shared" Condition="Exists('..\BonchApp\BonchApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

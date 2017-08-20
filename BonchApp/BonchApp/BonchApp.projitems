@@ -73,11 +73,17 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\MenuBg.png" />
+<<<<<<< HEAD
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\menu.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Images\burger.png" />
+=======
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\menu.png" />
+>>>>>>> e257a8b6d3c68de7d3ac68f1195343b980ee01e9
   </ItemGroup>
 </Project>
