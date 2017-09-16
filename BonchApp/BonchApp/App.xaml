@@ -8,11 +8,24 @@
 
         <!--Custom Navigation Bar-->
         <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="Fonts/RobotoLight.ttf" />
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="FontFamily" Value="Fonts/RobotoLight.ttf" />
+                <Setter Property="FontSize" Value="12" />
+            </Style>
             <ControlTemplate x:Key="MainPageTemplate">
-                <StackLayout HeightRequest="50">
-                    <Image Aspect="AspectFit"  Source="images/nav_bar.png"/>
-                </StackLayout>
+                <RelativeLayout HeightRequest="50">
+                    <Image Aspect="AspectFit" WidthRequest="100" Source="images/nav_bar.png"/>
+                </RelativeLayout>
             </ControlTemplate>
+            <Style TargetType="NavigationPage">
+                <Setter Property="HasNavigationBar" Value="True" />
+                <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BarBackgroundColor" Value="#FF2A3035" />
+            </Style>
         </ResourceDictionary>
 
     </Application.Resources>

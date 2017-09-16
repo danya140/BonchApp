@@ -12,10 +12,17 @@ namespace BonchApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MasterDetailPage1 : MasterDetailPage
     {
+        /* это для выхода по двойному клику именно с последней страницы (то есть с этой)
+          void CurrPage()
+          {
+               Page currentPage = Navigation.NavigationStack.LastOrDefault();
+               if (currentPage == this) LastPageCheck = true;
+          }*/
         public MasterDetailPage1()
         {
             InitializeComponent();
             MasterPage.ListView.ItemSelected += ListView_ItemSelected;
+
 
         }
 
@@ -24,7 +31,7 @@ namespace BonchApp
             var item = e.SelectedItem as MasterDetailPage1MenuItem;
             if (item == null)
                 return;
-
+           
             var page = (Page)Activator.CreateInstance(item.TargetType);
             page.Title = item.Title;
 

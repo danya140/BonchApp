@@ -9,12 +9,12 @@ namespace BonchApp
 {
 	public partial class App : Application
 	{
-		public App ()
+        public App ()
 		{
 			InitializeComponent();
 
 			MainPage = new BonchApp.MainPage();
-		}
+        }
 
 		protected override void OnStart ()
 		{
@@ -30,5 +30,5 @@ namespace BonchApp
 		{
 			// Handle when your app resumes
 		}
-	}
+    }
 }

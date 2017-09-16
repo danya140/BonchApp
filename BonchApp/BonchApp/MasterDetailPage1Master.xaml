@@ -2,47 +2,49 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BonchApp.MasterDetailPage1Master"
-             Title="Master"
+             Title="Master" 
              >
     <RelativeLayout >
-        <Image Source="menu_bg.png" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" 
-     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" Aspect="AspectFit"></Image>
+        <Image Source="MenuBg.png" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" 
+     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" Aspect="AspectFill"></Image>
+        <Image Source="menu.png" Aspect="AspectFit"></Image>
         <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="None"
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" 
      RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
             <ListView.Header>
-                <Grid BackgroundColor="#03A9F4">
+                <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="40"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"/>
                         <RowDefinition Height="20"/>
                         <!--Username element height ^-->
                         <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="20"/>
                     </Grid.RowDefinitions>
-                    <Label
-              Grid.Column="1"
-              Grid.Row="2"
-              Text="USERNAME"
-              Style="{DynamicResource SubtitleStyle}"/>
+                    <Label x:Name="fio" Grid.Column="1" Grid.Row="1" Text="Имя Фамилия" TextColor="LightGray" Style="{DynamicResource SubtitleStyle}"/>
+                    <Label Grid.Column="1" Margin="0,0,0,40" Grid.Row="2" Text="Профиль" TextColor="LightGray" FontSize="15" Style="{DynamicResource SubtitleStyle}"/>
                 </Grid>
             </ListView.Header>
-            <ListView.ItemTemplate 
-                                   >
+            <ListView.ItemTemplate> 
         <DataTemplate>
-          <ViewCell>
-            <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
-              <Label VerticalOptions="FillAndExpand" 
+          <ViewCell >
+                        <StackLayout Padding="30,10" HorizontalOptions="FillAndExpand" VerticalOptions="End">
+                            <Label 
+                    x:Name="lab"
+                    VerticalOptions="FillAndExpand" 
                     VerticalTextAlignment="Center" 
                     Text="{Binding Title}" 
-                    FontSize="24"/>
-            </StackLayout>
+                    Margin="20,0,0,0"
+                    FontSize="20"
+                    TextColor="LightGray"
+                               />
+                        </StackLayout>
           </ViewCell>
         </DataTemplate>
       </ListView.ItemTemplate>

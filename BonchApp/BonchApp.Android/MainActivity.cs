@@ -23,7 +23,30 @@ namespace BonchApp.Droid
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
 			LoadApplication (new BonchApp.App ());
-		}
-	}
+        }
+       
+    }
+    /* bool doubleBackToExitPressedOnce = false;
+    public override void OnBackPressed()
+    {
+
+        if (doubleBackToExitPressedOnce)
+        {
+            base.OnBackPressed();
+            Java.Lang.JavaSystem.Exit(0);
+            return;
+        }
+        bool LastPageCheck = true;    //тут надо умудриться сделать проверку на последнюю страницу
+        if (LastPageCheck == true)    //в файле MasterDetailPage1.xaml.cs есть код, который нужно соединить с этой помойкой
+        {
+            this.doubleBackToExitPressedOnce = true;
+            Toast.MakeText(this, "Нажмите еще раз для выхода!", ToastLength.Short).Show();
+
+            new Handler().PostDelayed(() =>
+            {
+                doubleBackToExitPressedOnce = false;
+            }, 2000);
+        }*/
 }
+
 
