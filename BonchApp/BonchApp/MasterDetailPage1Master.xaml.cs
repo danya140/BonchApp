@@ -46,7 +46,7 @@ namespace BonchApp
         public string getName()
         {
             string url = "http://194.87.111.65/index.php?file=User/info";
-
+            
             HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
             request.CookieContainer = httpGetCookie();
             request.Accept = "text/json";
@@ -64,8 +64,7 @@ namespace BonchApp
                 string firstName = infoJson.Values().ToList()[3].ToString();
                 string lastName = infoJson.Values().ToList()[4].ToString();
 
-                return firstName+ " " + lastName;
-
+                return firstName+ " " + lastName +" ";
 
             } else { return ""; }
 
@@ -77,12 +76,11 @@ namespace BonchApp
 
             string url = "http://194.87.111.65/?file=User/login&class=login&func=byHash&u_hash=8f615452c41e19d543f0b515d5078df6&ud_hash=92c88f1b4d46d72883217e62bc1d1610";
             HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
-
+            //add cookie container because request dont have it by default
             cookieJar = new CookieContainer();
             request.CookieContainer = cookieJar;
 
             //TODO: add exception when response code != 6 or 4 same in AboutMe.xaml.cs
-
             var response = (HttpWebResponse)request.GetResponse();
             StreamReader srt = new StreamReader(response.GetResponseStream());
 
