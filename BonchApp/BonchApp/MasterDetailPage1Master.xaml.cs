@@ -30,12 +30,23 @@ namespace BonchApp
             BindingContext = new MasterDetailPage1MasterViewModel();
             ListView = MenuItemsListView;
 
-            fio.Text = getName();
+            //try get full name from server
+            //use try/catch because there are no ways to check internet connection without additional packages
+            try
+            {
+                fio.Text = getName();
+
+            }
+            catch (Exception e)
+            {
+                fio.Text = "";
+            }
         }
 
         public string getName()
         {
             string url = "http://194.87.111.65/index.php?file=User/info";
+
             HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
             request.CookieContainer = httpGetCookie();
             request.Accept = "text/json";
@@ -55,6 +66,7 @@ namespace BonchApp
 
                 return firstName+ " " + lastName;
 
+
             } else { return ""; }
 
         }
@@ -68,6 +80,8 @@ namespace BonchApp
 
             cookieJar = new CookieContainer();
             request.CookieContainer = cookieJar;
+
+            //TODO: add exception when response code != 6 or 4 same in AboutMe.xaml.cs
 
             var response = (HttpWebResponse)request.GetResponse();
             StreamReader srt = new StreamReader(response.GetResponseStream());

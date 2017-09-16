@@ -102,6 +102,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ListViewLabelRenderer.cs" />
+
+    <Compile Include="MasterDetailPageRenderer.cs" />
     <Compile Include="ButtonRenderer.cs" />
     <Compile Include="FontRendererButton.cs" />
     <Compile Include="FontRendererLabel.cs" />

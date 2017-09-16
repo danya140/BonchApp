@@ -23,7 +23,11 @@ namespace BonchApp
         public AboutMe ()
 		{
 			InitializeComponent ();
-            getAbout();
+            try
+            {
+                getAbout();
+            }
+            catch (Exception e) { }
             
 		}
 
