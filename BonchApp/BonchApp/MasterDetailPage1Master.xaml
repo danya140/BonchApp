@@ -27,7 +27,7 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="20"/>
                     </Grid.RowDefinitions>
-                    <Label Grid.Column="1" Grid.Row="1" Text="Имя Фамилия" TextColor="LightGray" Style="{DynamicResource SubtitleStyle}"/>
+                    <Label x:Name="fio" Grid.Column="1" Grid.Row="1" Text="Имя Фамилия" TextColor="LightGray" Style="{DynamicResource SubtitleStyle}"/>
                     <Label Grid.Column="1" Margin="0,0,0,40" Grid.Row="2" Text="Профиль" TextColor="LightGray" FontSize="15" Style="{DynamicResource SubtitleStyle}"/>
                 </Grid>
             </ListView.Header>
