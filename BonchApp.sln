@@ -14,7 +14,6 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		BonchApp\BonchApp\BonchApp.projitems*{550dcdeb-c776-402b-b6fd-be056cff0b3a}*SharedItemsImports = 4
-		BonchApp\BonchApp\BonchApp.projitems*{60b33134-4c02-49d9-80b0-1649efa790e4}*SharedItemsImports = 4
 		BonchApp\BonchApp\BonchApp.projitems*{6b4d21ad-ef80-488c-bffb-efe65aed31e6}*SharedItemsImports = 4
 		BonchApp\BonchApp\BonchApp.projitems*{a3fc576a-ae80-49fa-98d2-b79b454bcd7a}*SharedItemsImports = 13
 	EndGlobalSection
@@ -212,5 +211,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B3B7F39-02C4-4C1F-82D3-5B3C855062F2}
 	EndGlobalSection
 EndGlobal
