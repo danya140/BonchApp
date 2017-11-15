@@ -15,6 +15,7 @@ namespace BonchApp
         public MainPage()
         {
             InitializeComponent();
+
             Button1.Clicked += LoginButton_Click;
             Entry1.PlaceholderColor = new Color(256, 256, 256, 0.4);
             Entry2.PlaceholderColor = new Color(256, 256, 256, 0.4);
@@ -23,10 +24,21 @@ namespace BonchApp
 
         }
 
+        private async void toMainPage()
+        {
+            await Navigation.PushModalAsync(new MasterDetailPage1());
+            Application.Current.MainPage = new MasterDetailPage1();
+        }
+
 
         private async void LoginButton_Click(object sender, EventArgs e)
         {
-            if (isLoginSuccess())
+            Button1.IsEnabled = false;
+            if (Application.Current.Properties["hash"] as string != null)
+            {
+                toMainPage();
+            }
+            else if (isLoginSuccess())
             {
                 await Navigation.PushModalAsync(new MasterDetailPage1());
                 Application.Current.MainPage = new MasterDetailPage1();
@@ -40,6 +52,8 @@ namespace BonchApp
 
         private bool isLoginSuccess()
         {
+
+            
 
             string url = "http://194.87.111.65/?file=User/login&func=byPass&username=" + Entry1.Text + "&password=" + Entry2.Text;
             HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
@@ -63,7 +77,7 @@ namespace BonchApp
             {
                 return false;
             }
-
+            
             
 
         }

@@ -57,7 +57,7 @@ namespace BonchApp
 
             JObject obj = JObject.Parse(txt);
             var code = int.Parse(obj.First.Values().ToList()[0].ToString());
-            if (code == 8)
+            if (code == 0)
             {
                 var infoJson = obj.Children().ElementAt(1).Values().ToList()[0];
 
@@ -74,7 +74,7 @@ namespace BonchApp
         public CookieContainer httpGetCookie()
         {
 
-            string url = "http://194.87.111.65/?file=User/login&class=login&func=byHash&u_hash=8f615452c41e19d543f0b515d5078df6&ud_hash=92c88f1b4d46d72883217e62bc1d1610";
+            string url = "http://194.87.111.65/?file=User/login&class=login&func=byHash&u_hash="+Application.Current.Properties["hash"] as string+"&ud_hash=92c88f1b4d46d72883217e62bc1d1610";
             HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
             //add cookie container because request dont have it by default
             cookieJar = new CookieContainer();
@@ -102,12 +102,13 @@ namespace BonchApp
                 MenuItems = new ObservableCollection<MasterDetailPage1MenuItem>(new[]
                 {
                     new MasterDetailPage1MenuItem { Id = 0, Title = "Новости" },
-                    new MasterDetailPage1MenuItem { Id = 1, Title = "Уведомления" },
-                    new MasterDetailPage1MenuItem { Id = 2, Title = "Справочник и навигация" },
-                    new MasterDetailPage1MenuItem { Id = 3, Title = "Файлы группы" },
-                    new MasterDetailPage1MenuItem { Id = 4, Title = "Студгородок" },
-                    new MasterDetailPage1MenuItem { Id = 5, Title = "Опросы" },
-                    new MasterDetailPage1MenuItem { Id = 6, Title = "О себе", TargetType = typeof(AboutMe) },
+                    new MasterDetailPage1MenuItem { Id = 1, Title = "Расписание", TargetType = typeof(TimeTable) },
+                    new MasterDetailPage1MenuItem { Id = 2, Title = "Уведомления" },
+                    new MasterDetailPage1MenuItem { Id = 3, Title = "Справочник и навигация" },
+                    new MasterDetailPage1MenuItem { Id = 4, Title = "Файлы группы" },
+                    new MasterDetailPage1MenuItem { Id = 5, Title = "Студгородок" },
+                    new MasterDetailPage1MenuItem { Id = 6, Title = "Опросы" },
+                    new MasterDetailPage1MenuItem { Id = 7, Title = "О себе", TargetType = typeof(AboutMe) },
                 });
             }
 

@@ -46,14 +46,14 @@ namespace BonchApp
 
             JObject obj = JObject.Parse(txt);
             var code = int.Parse(obj.First.Values().ToList()[0].ToString());
-            if (code == 8)
+            if (code == 0)
             {
                 var infoJson = obj.Children().ElementAt(1).Values().ToList()[0];
 
-                GroupName.Text = infoJson.Values().ToList()[2].ToString();
-                FirstName.Text = infoJson.Values().ToList()[3].ToString();
-                LastName.Text = infoJson.Values().ToList()[4].ToString();
-                Birthday.Text = infoJson.Values().ToList()[5].ToString();
+                GroupName.Text = "Группа: " + infoJson.Values().ToList()[2].ToString();
+                FirstName.Text = "Имя: " + infoJson.Values().ToList()[3].ToString();
+                LastName.Text = "Фамилия: " + infoJson.Values().ToList()[4].ToString();
+                Birthday.Text = "День рождения: " + infoJson.Values().ToList()[5].ToString();
             }
 
         }
@@ -61,7 +61,7 @@ namespace BonchApp
         //get Cookie after login
         public CookieContainer httpGetCookie()
         {
-            string url = "http://194.87.111.65/?file=User/login&class=login&func=byHash&u_hash=8f615452c41e19d543f0b515d5078df6&ud_hash=92c88f1b4d46d72883217e62bc1d1610";
+            string url = "http://194.87.111.65/?file=User/login&class=login&func=byHash&u_hash=" + Application.Current.Properties["hash"] as string +"&ud_hash=92c88f1b4d46d72883217e62bc1d1610";
             HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
 
             cookieJar = new CookieContainer();
